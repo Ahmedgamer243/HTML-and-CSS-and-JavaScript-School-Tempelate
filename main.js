@@ -56,6 +56,10 @@ if (document.body.id === "home") {
     document.getElementById("about-us").onclick = function () {
         window.location.href = "we.html";
     }
+
+    document.getElementById("books").onclick = function () {
+        window.location.href = "books.html";
+    }
 }
 
 
@@ -107,49 +111,7 @@ if (document.body.id == "quiz-list") {
 
 
 if (document.body.id === "quiz") {
-    // let params = new
-    //     URLSearchParams(window.location.search);
-    // let subject = params.get("subject");
-    // console.log("Subject value is:", subject);
 
-    // fetch("questions.json")
-    //     .then(response => response.json())
-    //     .then(data => {
-
-
-    //         let questions = data[subject];
-    //         console.log(questions[0]);
-    //         showQuestion(0);
-    //         let currentIndex = 0;
-    //         function showQuestion(index) {
-
-    //             document.getElementById("question").textContent =
-    //                 questions[index].question;
-
-    //             document.getElementById("questionImage").src =
-    //                 questions[index].image;
-
-    //             function showQuestion(index) {
-
-    //                 document.getElementById("question").textContent =
-    //                     questions[index].question;
-
-    //                 document.getElementById("questionImage").src =
-    //                     questions[index].image;
-    //             }
-    //             document.getElementById("next").onclick = function () {
-
-    //                 currentIndex++;
-
-    //                 if (currentIndex < questions.length) {
-    //                     showQuestion(currentIndex);
-    //                 } else {
-    //                     alert("Quiz Finished!");
-    //                 }
-    //             };
-    //         }
-
-    //     });
 
 
 
