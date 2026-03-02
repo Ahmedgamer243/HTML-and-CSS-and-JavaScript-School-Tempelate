@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>login-تسجيل الدخول</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="loginN">تسجيل الدخول الي مدرسه <span class="highlight">الشهيد علي زكريا</span> جاب الله</h1>
+        <img src="images/Gharbia Directorate of Education emblem.png" alt="School Image" class="school-image">
+        <form class="from" action="/login" method="post">
+            <label for="class">الصف:</label>
+            <input type="text" id="class" name="class" required><br><br>
+
+            <label for="user">البريد الإلكتروني أو اسم المستخدم:</label>
+            <input type="text" id="user" name="user" required><br><br>
+
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input class="btn-login" type="submit" value="تسجيل الدخول">
+        </form>
+        <a href="registration.html">هل لا تملك حساباً؟ سجل الآن</a>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const user = document.getElementById('user').value;
+            const password = document.getElementById('password').value;
+            if (!user || !password) {
+                alert('يرجى ملء جميع الحقول.');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
