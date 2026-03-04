@@ -37,28 +37,18 @@ if (document.body.id === "home") {
 
     let quizBtn = document.getElementById("quiz-btn");
     quizBtn.onclick = function () {
-        window.location.href = "quizelist.html"
+        window.location.href = "quizelist.html";
     };
 
 
     document.getElementById("events").onclick = function () {
         window.location.href = "events.html";
     }
-    document.getElementById("events2").onclick = function () {
-        window.location.href = "events.html";
-    }
     document.getElementById("profile").onclick = function () {
-        window.location.href = "profile.html";
-    }
-    document.getElementById("profile2").onclick = function () {
         window.location.href = "profile.html";
     }
     document.getElementById("about-us").onclick = function () {
         window.location.href = "we.html";
-    }
-
-    document.getElementById("books").onclick = function () {
-        window.location.href = "books.html";
     }
 }
 
@@ -115,8 +105,11 @@ if (document.body.id === "quiz") {
 
 
 
+
     let nextBtn = document.getElementById("next");
-    let backBtn = document.getElementById("back")
+    let backBtn = document.getElementById("back");
+    let chekBtn = document.getElementById("check");
+
     let count = 1;
     nextBtn.onclick = function () {
 
@@ -124,14 +117,13 @@ if (document.body.id === "quiz") {
         document.getElementById(`question${count}`).setAttribute("class", " ");
         count++;
     };
-
     let countLess = document.getElementsByTagName("img").length - 1;
     backBtn.onclick = function () {
 
         document.getElementById(`question${count}`).setAttribute("class", " ");
         document.getElementById(`question${count - 1}`).setAttribute("class", "active");
         count--;
-    }
+    };
 
     let answer = document.getElementsByClassName("answer");
     let answers = document.getElementsByClassName("answer");
@@ -150,5 +142,7 @@ if (document.body.id === "quiz") {
         }
 
     }
+
+
 
 }

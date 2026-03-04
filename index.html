@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحه الرئيسية-home</title>
     <!-- css file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <!-- normalize file -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="static/css/normalize.css">
     <!-- Icons file -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="static/css/all.min.css">
     <!-- The web font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <div class="img"><img src="images/Gharbia Directorate of Education emblem.png" alt=""></div>
+                <div class="img"><img src="static/images/Gharbia Directorate of Education emblem.png" alt=""></div>
                 <h1>الشهيد علي زكريا </h1>
                 <div class="icon-links"><i class="fa-solid fa-bars"></i></div>
 
@@ -57,15 +57,15 @@
 
                 <!--مكان الاسئله-->
 
-                <div class="box" id="profile">
+                <div class="box" id="quizelist" onclick="window.location.href ='quizelist.html'">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                    <h2>بياناتك</h2>
+                    <h2>الامتحانات(تحت التحديث)</h2>
                     <p>اختبر قدراتك مع معلمك</p>
                 </div>
 
                 <!--الفعاليات-->
 
-                <div class="box" id="events">
+                <div class="box" id="events" onclick="window.location.href ='events.html'">
                     <i class=" fa-solid fa-brain"></i>
                     <h2>الفعاليات</h2>
                     <p>اكتشف المزيد من التفاصيل</p>
@@ -73,15 +73,15 @@
 
                 <!-- التواصل -->
 
-                <div class="box" id="books">
+                <div class="box" id="profile" onclick="window.location.href ='profile.html'">
                     <i class="fa-solid fa-address-book"></i>
-                    <h2>ملخصاتك</h2>
+                    <h2>صفحتك</h2>
                     <p>اكتشف المزيد من التفاصيل</p>
                 </div>
 
-                <!-- عن المدرسة -->
+                <!-- عنا -->
 
-                <div class="box" id="about-us">
+                <div class="box" id="about-us" onclick="window.location.href='we.html'">
                     <i class="fa-solid fa-school"></i>
                     <h2>عن الفريق</h2>
                     <p>اكتشف المزيد من التفاصيل</p>
@@ -97,7 +97,7 @@
     <div class="about-school">
         <div class="container">
             <div class="content">
-                <div class="img"><img src="images/stadent.jpeg" alt="">
+                <div class="img"><img src="static/images/stadent.jpeg" alt="">
                 </div>
 
                 <div class="text">
@@ -115,38 +115,71 @@
 
     <!-- End aboutSchool  -->
     <!-- start news -->
-
     <div class="news">
 
-
-
         <div class="container">
-
             <div class="news-content">
 
                 <div class="box" id="profile2">
+
                     <div class="title">
-                        <h2>الأخبار والفعاليات</h2><br><br>
-
+                        <h2>الأخبار والفعاليات</h2>
                     </div>
-                    <div class="img"><img src="images/end.jpeg" alt="">
+                    <div class="img">
+                        <img src="static/images/profile.jpeg" alt="">
                     </div>
-                    <h3>نتائجك</h3>
-                    <button href="">اقرأ المزيد</button>
-
+                    <h3>الملف الشخصي</h3>
+                    <button onclick="window.location.href='profile.html'">اقرأ المزيد</button>
                 </div>
+
                 <div class="box">
-                    <div class="img"><img src="images/qize.jpeg" alt="">
+                    <div class="img">
+                        <img src="static/images/qize.jpeg" alt="">
                     </div>
                     <h3>صفحه الاسئله</h3>
-                    <button id="quiz-btn">اقرأ المزيد</button>
+                    <button onclick="window.location.href='quizelist.html'">اقرأ المزيد</button>
                 </div>
-                <div class="box" id="events2">
-                    <div class="img"><img src="images/1000_F_411787346_ppT0ACrQZrXWKyejvRtFjmx8Ie1GnUKS.webp" alt="">
+
+                <div class="box">
+                    <div class="img">
+                        <img src="static/images/1000_F_411787346_ppT0ACrQZrXWKyejvRtFjmx8Ie1GnUKS.webp" alt="">
                     </div>
                     <h3>الانشطة</h3>
-                    <button href="">اقرأ المزيد</button>
+                    <button onclick="window.location.href='events.html'">اقرأ المزيد</button>
                 </div>
+
+                <div class="box">
+                    <div class="img">
+                        <img src="static/images/focused-students-using-tablet-discussing-information.jpg" alt="">
+                    </div>
+                    <h3>الكتب</h3>
+                    <button onclick="window.location.href='books.html'">اقرأ المزيد</button>
+                </div>
+
+                <div class="box">
+                    <div class="img">
+                        <img src="static/images/theater.jpeg" alt="">
+                    </div>
+                    <h3>المسرحيات</h3>
+                    <button onclick="window.location.href='theater.html'">اقرأ المزيد</button>
+                </div>
+
+                <div class="box">
+                    <div class="img">
+                        <img src="static/images/coment.png" alt="">
+                    </div>
+                    <h3>التعليقات</h3>
+                    <button onclick="window.location.href='coment.html'">اقرأ المزيد</button>
+                </div>
+
+                <div class="box">
+                    <div class="img">
+                        <img src="static/images/news.jpeg" alt="">
+                    </div>
+                    <h3>الاخبار</h3>
+                    <button onclick="window.location.href='news.html'">اقرأ المزيد</button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -155,7 +188,8 @@
     <div class="opinion">
         <div class="container">
             <div class="opinion-contentA">
-                <div class="imgA"><img src="images/focused-students-using-tablet-discussing-information.jpg" alt="">
+                <div class="imgA"><img src="static/images/focused-students-using-tablet-discussing-information.jpg"
+                        alt="">
                 </div>
                 <div class="text">
                     <h3>آراء أولياء الأمور</h3>
