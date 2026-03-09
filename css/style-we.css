@@ -1,5 +1,4 @@
 /* ================= Start Variables ================= */
-
 :root {
     --maincolor: #1f496f;
     --secondcolor: #fda909;
@@ -10,7 +9,6 @@
 
 
 /* ================= Start Global Rules ================= */
-
 * {
     box-sizing: border-box;
     text-align: right;
@@ -21,6 +19,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-color: #f5f7fb;
+
 }
 
 .container {
@@ -52,7 +51,6 @@ body {
 
 
 /* ================= Start Page Title ================= */
-
 header {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +60,6 @@ header {
 
 header .img {
     width: 40px;
-
 }
 
 header .img img {
@@ -82,16 +79,12 @@ header .logo .img {
     top: 50%;
     transform: translateY(-19%);
     right: -10px;
-
 }
 
 header .logo h1 {
     margin-right: 30px;
     color: var(--maincolor);
 }
-
-
-
 
 header .container {
     display: flex;
@@ -124,7 +117,6 @@ h1::after {
 
 
 /* ================= Start Logos ================= */
-
 .img-logo-left,
 .img-logo-right {
     position: absolute;
@@ -140,11 +132,16 @@ h1::after {
     right: 20px;
 }
 
+.img-logo-left:hover,
+.img-logo-right:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 /* ================= End Logos ================= */
 
 
 /* ================= Start Sections ================= */
-
 .team,
 .goal,
 .special-thanks {
@@ -167,7 +164,6 @@ h1::after {
 
 
 /* ================= Start Section Titles ================= */
-
 .team h2,
 .goal h2,
 .special-thanks h2 {
@@ -180,7 +176,6 @@ h1::after {
 
 
 /* ================= Start Lists ================= */
-
 ul {
     list-style: none;
     padding: 0;
@@ -193,6 +188,7 @@ ul li {
     padding-right: 20px;
 }
 
+/* النقطة قبل كل عنصر li */
 ul li::before {
     content: "";
     width: 8px;
@@ -204,11 +200,25 @@ ul li::before {
     border-radius: 50%;
 }
 
+/* تنسيق a داخل li بنفس الـ li - لينك في نفس السطر */
+ul li a {
+    display: inline;
+    white-space: nowrap;
+    color: var(--maincolor);
+    text-decoration: none;
+    padding-right: 0;
+    /* لأن الـ li نفسها ليها padding */
+}
+
+ul li a:hover {
+    color: var(--maincolor);
+    text-decoration: underline;
+}
+
 /* ================= End Lists ================= */
 
 
 /* ================= Start Paragraph ================= */
-
 p {
     font-size: 18px;
     line-height: 1.8;
@@ -218,8 +228,55 @@ p {
 /* ================= End Paragraph ================= */
 
 
-/* ================= Responsive ================= */
+/* ================= Start Footer ================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-family: Arial;
+}
 
+/* ================= End Footer ================= */
+
+
+/* ================= Start Transfers Box ================= */
+.box-transfers {
+    display: flex;
+    /* يخليهم في خط واحد */
+    justify-content: center;
+    /* في النص */
+    gap: 40px;
+    /* مسافة 5 سم بينهم */
+}
+
+@media(max-width:747px) {
+    .box-transfers {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(20px, 1fr));
+    }
+}
+
+.transfers-1 {
+    text-decoration: none;
+    color: var(--maincolor);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.transfers-1:hover {
+    color: #ffcc00;
+    /* أصفر أفتح عند المرور */
+}
+
+/* ================= End Transfers Box ================= */
+
+
+/* ================= Responsive ================= */
 @media (max-width: 768px) {
 
     .team,
@@ -239,31 +296,8 @@ p {
     }
 }
 
-.goal-text {
-    text-align: center;
-    color: black;
-}
-
-.img-logo-left {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
-}
-
-.img-logo-left:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
-}
-
-img-logo-right {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 100px;
-}
-
-.img-logo-right:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
+@media (max-width: 576px) {
+    ul li a {
+        font-size: 16px;
+    }
 }
